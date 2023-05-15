@@ -26,4 +26,60 @@ const DetailScreen = ({ route }) => {
   );
 };
 
+export default DetailScreen;
 
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+
+  },
+  imageContainer: {
+    position: 'relative',
+    height: 300,
+  },
+  gambarMakanan: {
+    width: 390,
+    height: 242,
+    resizeMode: 'cover',
+    borderRadius: 8,
+  },
+  deskripsiContainer: {
+    flex: 1,
+    padding: 16,
+    borderRadius: 20,
+    backgroundColor: '#A51B0B',
+    position: 'absolute',
+    top: -100,
+    zIndex: 1,
+    width: 370,
+    height: 643,
+    left: 10,
+    top: 218,
+  },
+  namaMakanan: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 8,
+  },
+  divider: {
+    height: 1,
+    backgroundColor: '#ccc',
+    marginVertical: 16,
+  },
+  title: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    marginBottom: 8,
+    color: '#fff',
+  },
+  listBahan: {
+    marginLeft: 16,
+    marginBottom: 4,
+    color: '#000',
+  },
+  caraMembuat: {
+    marginLeft: 16,
+    marginBottom: 16,
+    color: '#000',
+  },
+});
