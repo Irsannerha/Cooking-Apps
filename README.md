@@ -1,4 +1,5 @@
-# APLIKASI COOKING APPS
+# [ TUBES PAM 2023 ]
+# APLIKASI COOKING APPS 
 
 ## Deskripsi
 Aplikasi Cooking Apps merupakan aplikasi android  yang berisikan resep resep masakan. dengan menggunakan aplikasi ini pengguna dapat menemukan resep masakan yang diinginkan
@@ -13,7 +14,7 @@ Aplikasi Cooking Apps merupakan aplikasi android  yang berisikan resep resep mas
 - Change Password
 - Change User
 
-## Pengembang Game
+## Pengembang Aplikasi Cooking-Apps 
  
 | KELOMPOK : ReactRangers |
 | ---------------- |
