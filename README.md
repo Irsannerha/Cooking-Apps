@@ -22,7 +22,7 @@ Aplikasi Cooking Apps merupakan aplikasi android  yang berisikan resep resep mas
 | NIM  | Nama | Sebagai |
 | ----- | --- | --- |
 | 120140043  | Irsan Romardi Harahap  | Programmer |
-| 120140145  | M Nuur Arinda M  | Programmer |
+| 120140145  | M Nuur Arinda Marrezka  | Programmer |
 | 120140064  | Shah Raja Abdullah Al Turtusi  | Programmer |
 | 119140033  | Sinta Dwi Putri | UI/UX designer |
 | 120140149  | Dewi Anggraini  | UI/UX designer |
