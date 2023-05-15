@@ -50,3 +50,58 @@ const AccUser = () => {
   );
 };
 
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#f0f8ff',
+    padding: 70,
+  },
+  header: {
+    alignItems: 'center',
+    marginBottom: 20,
+  },
+  avatar: {
+    width: 100,
+    height: 100,
+    borderRadius: 50,
+    marginBottom: 0,
+  },
+
+  premiumText: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#d58512',
+  },
+  userInfo: {
+    marginBottom: 20,
+  },
+  name: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginBottom: 5,
+  },
+  email: {
+    fontSize: 16,
+    color: 'black',
+  },
+  profileButton: {
+    backgroundColor: '#DF0606',
+    padding: 10,
+    borderRadius: 5,
+    alignItems: 'center',
+    marginBottom: 10,
+  },
+  logoutButton: {
+    backgroundColor: '#DF0606',
+    padding: 10,
+    borderRadius: 5,
+    alignItems: 'center',
+  },
+  buttonText: {
+    color: 'white',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+});
+
+export default AccUser;
