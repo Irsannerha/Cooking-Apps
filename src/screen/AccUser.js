@@ -21,3 +21,32 @@ const AccUser = () => {
       autoHide: true,
     });
   };
+
+  return (
+    <View style={styles.container}>
+      <BackButton />
+      <View style={styles.header}>
+        <Image source={require('../../img/foto.png')} style={styles.avatar} />
+        <Text style={styles.premiumText}>Premium Account</Text>
+      </View>
+      <View style={styles.userInfo}>
+        <Text style={[styles.name, { textAlign: 'center' }]}>
+          {user.name || 'User name'}
+        </Text>
+        <Text style={[styles.email, { textAlign: 'center' }]}>
+          {user.email || 'User email'}
+        </Text>
+      </View>
+      <TouchableOpacity
+        style={styles.profileButton}
+        onPress={() => navigation.navigate('UpdateUser')}
+      >
+        <Text style={styles.buttonText}>Profile</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.logoutButton} onPress={handleLogout}>
+        <Text style={styles.buttonText}>Logout</Text>
+      </TouchableOpacity>
+    </View>
+  );
+};
+
