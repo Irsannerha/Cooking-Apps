@@ -17,32 +17,9 @@ export default function App() {
   return (
     <AuthProvider>
       <NavigationContainer>
-        <Stack.Navigator 
-        // initialRouteName={'AccUser'}
+        <Stack.Navigator
+          // initialRouteName={'HomeScreen'}
           screenOptions={{
             headerShown: false,
           }}
-        >
-          <Stack.Screen name='LoginScreen' component={LoginScreen} />
-          <Stack.Screen name='RegisterScreen' component={RegisterScreen} />
-          <Stack.Screen name='HomeScreen' component={HomeScreen} />
-          <Stack.Screen name='DetailScreen' component={DetailScreen} />
-          <Stack.Screen name='AddMakanan' component={AddMakanan} />
-          <Stack.Screen name='AccUser' component={AccUser} />
-          <Stack.Screen name='UpdatePass' component={UpdatePass} />
-          <Stack.Screen name='UpdateUser' component={UpdateUser} />
-        </Stack.Navigator>
-      </NavigationContainer>
-      <Toast />
-    </AuthProvider>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+        ></Stack.Navigator>
