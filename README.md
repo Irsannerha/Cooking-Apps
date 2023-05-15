@@ -14,6 +14,15 @@ Aplikasi Cooking Apps merupakan aplikasi android  yang berisikan resep resep mas
 - Change Password
 - Change User
 
+## Menjalankan Aplikasi COoking-Apps
+Sebelum menjalankan Aplikasi Cooking Apps, pastikan install Aplikasi Expo Go Untuk menjalankan via Android/Via Web Browser:
+
+Perintah untuk menjalankan game:
+```
+# npm install
+# npm start
+```
+
 ## Pengembang Aplikasi Cooking-Apps 
  
 | KELOMPOK : ReactRangers |
