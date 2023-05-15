@@ -66,3 +66,39 @@ const UpdatePass = () => {
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#f0f8ff',
+    borderRadius: 10,
+    padding: 50,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  textInput: {
+    borderWidth: 1,
+    borderColor: '#F50',
+    padding: 10,
+    borderRadius: 5,
+    marginBottom: 20,
+    width: '100%',
+  },
+  saveButton: {
+    backgroundColor: '#DF0606',
+    padding: 10,
+    borderRadius: 5,
+    alignItems: 'center',
+  },
+  saveButtonText: {
+    color: '#fff',
+    fontSize: 18,
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 20,
+  },
+});
+
+export default UpdatePass;
