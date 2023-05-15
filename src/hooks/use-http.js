@@ -27,14 +27,14 @@ const useHttp = () => {
       } catch (err) {
         let error = err;
         if (err.response) {
-          error = err.response.data.message || 'Something went wrong!';
+          error = err.response.data?.message || 'Something went wrong!';
         } else {
           error = err.message || 'Something went wrong!';
         }
         if (error === 'Invalid credentials') {
           error = 'Password salah';
         }
-        if (err.response.data.errors) {
+        if (err.response.data?.errors) {
           const { field, message } = err.response.data.errors[0];
           error = `${field} doesn't ${message}`;
         }
