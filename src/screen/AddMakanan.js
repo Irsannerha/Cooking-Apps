@@ -28,3 +28,42 @@ const AddMakanan = () => {
     //   }
     // });
   };
+
+  const AddRecipeSchema = Yup.object().shape({
+    title: Yup.string().required('Required'),
+    category: Yup.string().required('Required'),
+    tags: Yup.string().required('Required'),
+    ingredients: Yup.string().required('Required'),
+    steps: Yup.string().required('Required'),
+  });
+
+  const formik = useFormik({
+    initialValues: {
+      title: '',
+      category: '',
+      tags: '',
+      ingredients: '',
+      steps: '',
+    },
+    validationSchema: AddRecipeSchema,
+    onSubmit: (values) => {
+      sendRequest(
+        {
+          method: 'POST',
+          url: '/api/v1/recipes',
+          body: values,
+        },
+        (responseData) => {
+          Toast.show({
+            type: 'success',
+            text1: 'Success',
+            text2: `Recipe ${responseData.data.recipe.title} added successfully!`,
+            visibilityTime: 5000,
+            autoHide: true,
+          });
+          formik.resetForm();
+          navigation.navigate('HomeScreen');
+        }
+      );
+    },
+  });
