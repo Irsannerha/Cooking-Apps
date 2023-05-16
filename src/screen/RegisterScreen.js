@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   StyleSheet,
   Text,
@@ -48,6 +48,7 @@ const RegisterScreen = () => {
             visibilityTime: 5000,
             autoHide: true,
           });
+          formik.resetForm();
         }
       );
     },

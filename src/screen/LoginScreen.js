@@ -23,9 +23,8 @@ const LoginSchema = Yup.object().shape({
 
 const LoginScreen = () => {
   const { isLoading, error, sendRequest } = useHttp();
-  const { updateToken } = useAuth();
+  const { updateToken, updateUser } = useAuth();
   const navigation = useNavigation();
- 
 
   const formik = useFormik({
     initialValues: { email: '', password: '' },
@@ -39,6 +38,7 @@ const LoginScreen = () => {
         },
         (responseData) => {
           updateToken(responseData.token);
+          updateUser(responseData.data.user);
           Toast.show({
             type: 'success',
             text1: 'Success',
@@ -46,10 +46,11 @@ const LoginScreen = () => {
             visibilityTime: 5000,
             autoHide: true,
           });
-          // if have token, navigate to HomeScreen
           if (responseData.token) {
             navigation.navigate('HomeScreen');
           }
+          // clear input
+          formik.resetForm();
         }
       );
     },
