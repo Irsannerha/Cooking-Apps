@@ -18,7 +18,7 @@ export default function App() {
     <AuthProvider>
       <NavigationContainer>
         <Stack.Navigator
-          // initialRouteName={'HomeScreen'}
+          // initialRouteName={'UpdateUser'}
           screenOptions={{
             headerShown: false,
           }}

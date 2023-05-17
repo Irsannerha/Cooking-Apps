@@ -49,34 +49,24 @@ const UpdateUser = () => {
           <Text style={styles.imagePickerButtonText}>Upload Foto</Text>
         </TouchableOpacity>
       )}
-      <View style={styles.centered}>
-        <TextInput
-          placeholder='Madazyan'
-          style={styles.textInput}
-          value={userName}
-          onChangeText={(text) => setUserName(text)}
-        />
-        <TextInput
-          placeholder='madazyan@mail.com'
-          style={styles.textInput}
-          value={userEmail}
-          onChangeText={(text) => setUserEmail(text)}
-        />
-        <TouchableOpacity
-          style={styles.changePasswordButton}
-          onPress={handleChangePassword}
-        >
-          <Text
-            style={styles.changePasswordButtonText}
-            onPress={() => navigation.navigate('UpdatePass')}
-          >
-            Ganti Password
-          </Text>
-        </TouchableOpacity>
+      <View style={styles.avatarContainer}>
+        <Image source={require('../../img/foto.png')} style={styles.avatar} />
       </View>
+      <View style={styles.userInfoContainer}>
+      <Text style={styles.premiumText}>Premium Account</Text>
+        <Text style={styles.userInfoText}>Madazyan</Text>
+        <Text style={styles.userInfoText}>madazyan@itera.ac.id</Text>
+      </View>
+      <TouchableOpacity
+        style={styles.changePasswordButton}
+        onPress={() => navigation.navigate('UpdatePass')}
+      >
+        <Text style={styles.changePasswordButtonText}>Ganti Password</Text>
+      </TouchableOpacity>
     </View>
   );
 };
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -85,20 +75,29 @@ const styles = StyleSheet.create({
     padding: 50,
     paddingTop: 70,
   },
-  centered: {
-    flex: 1,
-    justifyContent: 'center',
+  avatarContainer: {
+    flexDirection: 'row',
     alignItems: 'center',
+    marginBottom: 10,
+    justifyContent: 'center',
+  },
+  avatar: {
+    width: 120,
+    height: 120,
+    marginRight: 5,
+    borderRadius: 60,
+  },
+  premiumText: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#d58512',
+    marginTop: 20,
+    textAlign: 'center',
   },
   userImage: {
     width: '100%',
-    height: 200,
+    height: 240,
     marginBottom: 20,
-  },
-  uploadIcon: {
-    width: 50,
-    height: 50,
-    marginRight: 10,
   },
   imagePickerButton: {
     backgroundColor: '#fff',
@@ -107,17 +106,21 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 20,
   },
-  imagePickerButtonText: {
-    fontSize: 18,
+  uploadIcon: {
+    width: 50,
+    height: 50,
+    marginRight: 10,
   },
-  textInput: {
-    borderWidth: 1,
-    borderColor: '#F50',
-    padding: 10,
-    borderRadius: 5,
-    marginBottom: 20,
-    width: '100%',
-    color: '#000',
+  userInfoContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 0,
+  },
+  userInfoText: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 5,
+    textAlign: 'center',
   },
   changePasswordButton: {
     backgroundColor: '#DF0606',
@@ -128,7 +131,7 @@ const styles = StyleSheet.create({
   changePasswordButtonText: {
     color: '#fff',
     fontSize: 18,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
 });
 
